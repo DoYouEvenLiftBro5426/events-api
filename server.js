@@ -5,11 +5,13 @@
 
 import express from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
 
 // URI declared here — line 10 (as required by submission comments)
 const URI = process.env.URI || 'mongodb+srv://salankapar_db_user:REwTRzp33qKkQpEi@cluster0.uf44mpa.mongodb.net/EventDBS?appName=Cluster0';
 
 const app = express();
+app.use(cors());
 const PORT = 3000;
 
 // Middleware to parse incoming JSON request bodies
