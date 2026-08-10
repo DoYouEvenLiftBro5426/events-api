@@ -7,7 +7,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 
 // URI declared here — line 10 (as required by submission comments)
-const URI = 'mongodb://localhost:27017/EventDBS';
+const URI = process.env.URI || 'mongodb+srv://salankapar_db_user:REwTRzp33qKkQpEi@cluster0.uf44mpa.mongodb.net/EventDBS?appName=Cluster0';
 
 const app = express();
 const PORT = 3000;
